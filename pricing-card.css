@@ -1,0 +1,100 @@
+/* Pricing Card Component Styles */
+.pricing-card {
+  width: 300px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Fixed typo and improved shadow */
+  padding: 25px;
+  text-align: left;
+  border-radius: 8px; /* Added border radius for modern look */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added hover effects */
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.pricing-card__price {
+  font-size: 20px;
+  color: #28a745;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.pricing-card__features {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 25px 0;
+}
+
+.pricing-card__features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 20px;
+}
+
+.pricing-card__features li:before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.pricing-card__features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card__btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.pricing-card__btn:hover {
+  background: #0056b3;
+}
+
+.pricing-card__btn:active {
+  transform: translateY(1px);
+}
+
+/* Container for multiple cards */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
